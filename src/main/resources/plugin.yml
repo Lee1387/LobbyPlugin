@@ -1,0 +1,10 @@
+name: LobbyPlugin
+version: '${project.version}'
+main: com.lee1387.lobbyplugin.LobbyPlugin
+api-version: '1.21'
+
+commands:
+  setlobby:
+    description: A command to set the lobby position.
+  lobby:
+    description: Teleports you back to the lobby position.
