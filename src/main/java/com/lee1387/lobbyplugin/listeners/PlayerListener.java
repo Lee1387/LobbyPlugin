@@ -4,6 +4,7 @@ import com.lee1387.lobbyplugin.LobbyPlugin;
 import com.lee1387.lobbyplugin.items.ExitItem;
 import com.lee1387.lobbyplugin.items.GadgetsItem;
 import com.lee1387.lobbyplugin.items.gadgets.ColorfulArmorItem;
+import com.lee1387.lobbyplugin.items.gadgets.SpidermanItem;
 import com.lee1387.lobbyplugin.items.gadgets.TNTLauncherItem;
 import org.bukkit.ChatColor;
 import org.bukkit.GameMode;
@@ -102,6 +103,7 @@ public class PlayerListener implements Listener {
 
                 player.getInventory().setItem(0, TNTLauncherItem.createTNTLauncherItem());
                 player.getInventory().setItem(1, ColorfulArmorItem.createColorfulArmorItem());
+                player.getInventory().setItem(2, SpidermanItem.createSpidermanItem());
                 player.getInventory().setItem(8, ExitItem.createExitItem());
 
             } else if (item.isSimilar(ColorfulArmorItem.createColorfulArmorItem())) {
@@ -109,6 +111,8 @@ public class PlayerListener implements Listener {
                 ColorfulArmorItem.onRightClick(player);
             } else if (item.isSimilar(TNTLauncherItem.createTNTLauncherItem())) {
                 TNTLauncherItem.onRightClick(player);
+            } else if (item.isSimilar(SpidermanItem.createSpidermanItem())) {
+                SpidermanItem.onRightClick(player);
             } else if (item.isSimilar(ExitItem.createExitItem())) {
                 ExitItem.onRightClick(event);
             }

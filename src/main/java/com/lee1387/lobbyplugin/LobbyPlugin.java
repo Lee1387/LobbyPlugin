@@ -2,6 +2,7 @@ package com.lee1387.lobbyplugin;
 
 import com.lee1387.lobbyplugin.commands.LobbyCommand;
 import com.lee1387.lobbyplugin.commands.SetLobbyCommand;
+import com.lee1387.lobbyplugin.items.gadgets.SpidermanItem;
 import com.lee1387.lobbyplugin.items.gadgets.TNTLauncherItem;
 import com.lee1387.lobbyplugin.listeners.BlockListener;
 import com.lee1387.lobbyplugin.listeners.EntityListener;
@@ -27,6 +28,7 @@ public final class LobbyPlugin extends JavaPlugin {
         getCommand("lobby").setExecutor(new LobbyCommand(this));
 
         new TNTLauncherItem(this);
+        new SpidermanItem(this);
 
         teleportPlayersToLobby();
         setWorldToDay();

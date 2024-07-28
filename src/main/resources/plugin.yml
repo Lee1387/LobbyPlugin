@@ -1,5 +1,5 @@
 name: LobbyPlugin
-version: '${project.version}'
+version: 1.0.1
 main: com.lee1387.lobbyplugin.LobbyPlugin
 api-version: '1.21'
 
