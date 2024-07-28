@@ -16,7 +16,6 @@ import java.util.Map;
 public class TNTLauncherItem {
 
     private static final long COOLDOWN_TIME = 3000;
-    private static final long DELAY_AFTER_MESSAGE = 20;
     private static final Map<String, Long> lastUseTime = new HashMap<>();
     private static final Plugin plugin = Bukkit.getPluginManager().getPlugin("LobbyPlugin");
 
@@ -41,14 +40,6 @@ public class TNTLauncherItem {
 
             if (timeLeft > 0) {
                 player.sendMessage(ChatColor.RED + "You can use the TNT Launcher again in " + (timeLeft / 1000) + " seconds");
-
-                new BukkitRunnable() {
-                    @Override
-                    public void run() {
-                        lastUseTime.remove(playerName);
-                    }
-                }.runTaskLater(plugin, DELAY_AFTER_MESSAGE);
-
                 return;
             }
         }
