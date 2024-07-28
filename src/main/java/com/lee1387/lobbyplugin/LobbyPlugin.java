@@ -26,6 +26,8 @@ public final class LobbyPlugin extends JavaPlugin {
         getCommand("setlobby").setExecutor(new SetLobbyCommand(this));
         getCommand("lobby").setExecutor(new LobbyCommand(this));
 
+        new TNTLauncherItem(this);
+
         teleportPlayersToLobby();
         setWorldToDay();
         disableWeather();
